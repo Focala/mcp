@@ -140,7 +140,7 @@ These connect inside Focala (they are not separate MCP servers): GA4, Google Sea
 
 ## Links
 
-- [Docs](https://focala.ai/docs/mcp)
+- [Docs](https://app.focala.ai/docs/mcp.html)
 - [Setup guide](https://focala.ai/guides/connect-ai-assistants-focala-mcp)
 - [Website](https://focala.ai)
 - [Support](https://focala.ai/contact)
