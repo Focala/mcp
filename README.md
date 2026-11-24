@@ -4,7 +4,7 @@
   <img src="assets/focala-icon-400.png" alt="Focala" width="120" height="120" />
 </p>
 
-Official docs and setup for the Focala MCP server — AI search visibility for Answer Engine Optimization (AEO), Generative Engine Optimization (GEO) and SEO: brand mentions and citations in ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews, plus GA4, Search Console, CRM and buyer insights in Claude, Cursor, ChatGPT and more.
+Official docs and setup for the Focala MCP server — AI search visibility for Answer Engine Optimization (AEO), Generative Engine Optimization (GEO) and SEO: brand mentions and citations in ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews, plus GA4, Search Console and buyer insights in Claude, Cursor, ChatGPT and more.
 
 ## What it is
 
@@ -16,7 +16,7 @@ Its MCP server is a **hosted remote server** (Streamable HTTP) at:
 https://app.focala.ai/api/mcp
 ```
 
-Connect ChatGPT, Claude, Perplexity, Gemini, Grok, Cursor or any MCP client and get AI search analytics for AEO, GEO and AI SEO in one place — brand visibility, competitor comparisons, cited sources, content opportunities, AI referral traffic, GA4, Search Console, CRM pipeline and buyer insights. Auth is **OAuth 2.0 authorization code + PKCE (S256)**. There is no API key, nothing to install, and no npx / npm / Docker package. Add the URL in your client, sign in, and pick one Focala workspace per connection. A Focala account is required.
+Connect ChatGPT, Claude, Perplexity, Gemini, Grok, Cursor or any MCP client and get AI search analytics for AEO, GEO and AI SEO in one place — brand visibility, competitor comparisons, cited sources, content opportunities, AI referral traffic, GA4, Search Console and buyer insights. Auth is **OAuth 2.0 authorization code + PKCE (S256)**. There is no API key, nothing to install, and no npx / npm / Docker package. Add the URL in your client, sign in, and pick one Focala workspace per connection. A Focala account is required.
 
 ## What you can do
 
