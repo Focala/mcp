@@ -4,7 +4,7 @@
   "title": "Focala",
   "description": "AEO, GEO & SEO AI visibility: brand mentions, citations, share of voice, GA4 & GSC.",
   "version": "1.0.0",
-  "websiteUrl": "https://focala.ai",
+  "websiteUrl": "https://app.focala.ai/docs/mcp.html",
   "remotes": [
     {
       "type": "streamable-http",
