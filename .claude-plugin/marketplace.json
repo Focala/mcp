@@ -1,0 +1,33 @@
+{
+  "name": "focala-mcp",
+  "owner": {
+    "name": "Focala",
+    "url": "https://focala.ai"
+  },
+  "metadata": {
+    "description": "Focala MCP customer skills and remote server for AI visibility (AEO, GEO, SEO)."
+  },
+  "plugins": [
+    {
+      "name": "focala",
+      "source": "./",
+      "description": "Agent Skills for AI visibility briefings, competitor gaps, opportunity planning, and AI traffic reports, plus the hosted Focala MCP server.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Focala",
+        "url": "https://focala.ai"
+      },
+      "homepage": "https://app.focala.ai/docs/mcp.html",
+      "repository": "https://github.com/Focala/mcp",
+      "license": "MIT",
+      "keywords": [
+        "mcp",
+        "aeo",
+        "geo",
+        "seo",
+        "ai-visibility",
+        "focala"
+      ]
+    }
+  ]
+}

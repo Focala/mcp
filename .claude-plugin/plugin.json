@@ -1,0 +1,31 @@
+{
+  "name": "focala",
+  "displayName": "Focala",
+  "version": "1.0.0",
+  "description": "AI visibility skills for AEO/GEO/SEO: briefings, competitor gaps, opportunity plans, and AI referral traffic via the Focala MCP server.",
+  "author": {
+    "name": "Focala",
+    "url": "https://focala.ai"
+  },
+  "homepage": "https://app.focala.ai/docs/mcp.html",
+  "repository": "https://github.com/Focala/mcp",
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "aeo",
+    "geo",
+    "seo",
+    "ai-visibility",
+    "focala"
+  ],
+  "documentationUrl": "https://app.focala.ai/docs/mcp.html",
+  "supportUrl": "https://focala.ai/contact",
+  "privacyPolicyUrl": "https://focala.ai/privacy-policy",
+  "termsOfServiceUrl": "https://focala.ai/tos",
+  "mcpServers": {
+    "focala": {
+      "type": "http",
+      "url": "https://app.focala.ai/api/mcp"
+    }
+  }
+}

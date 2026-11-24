@@ -4,7 +4,7 @@
   <img src="assets/focala-icon-400.png" alt="Focala" width="120" height="120" />
 </p>
 
-Official docs and setup for the Focala MCP server — AI search visibility for Answer Engine Optimization (AEO), Generative Engine Optimization (GEO) and SEO: brand mentions and citations in ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews, plus GA4, Search Console, CRM and buyer insights in Claude, Cursor, ChatGPT and more.
+Official docs and setup for the Focala MCP server — AI search visibility for Answer Engine Optimization (AEO), Generative Engine Optimization (GEO) and SEO: brand mentions and citations in ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews, plus GA4, Search Console and buyer insights in Claude, Cursor, ChatGPT and more.
 
 ## What it is
 
@@ -16,7 +16,7 @@ Its MCP server is a **hosted remote server** (Streamable HTTP) at:
 https://app.focala.ai/api/mcp
 ```
 
-Connect ChatGPT, Claude, Perplexity, Gemini, Grok, Cursor or any MCP client and get AI search analytics for AEO, GEO and AI SEO in one place — brand visibility, competitor comparisons, cited sources, content opportunities, AI referral traffic, GA4, Search Console, CRM pipeline and buyer insights. Auth is **OAuth 2.0 authorization code + PKCE (S256)**. There is no API key, nothing to install, and no npx / npm / Docker package. Add the URL in your client, sign in, and pick one Focala workspace per connection. A Focala account is required.
+Connect ChatGPT, Claude, Perplexity, Gemini, Grok, Cursor or any MCP client and get AI search analytics for AEO, GEO and AI SEO in one place — brand visibility, competitor comparisons, cited sources, content opportunities, AI referral traffic, GA4, Search Console and buyer insights. Auth is **OAuth 2.0 authorization code + PKCE (S256)**. There is no API key, nothing to install, and no npx / npm / Docker package. Add the URL in your client, sign in, and pick one Focala workspace per connection. A Focala account is required.
 
 ## What you can do
 
@@ -87,6 +87,25 @@ Use the [official Focala plugin](https://chatgpt.com/plugins/plugin_asdk_app_6ac
 
 Any client that supports **Streamable HTTP** and **OAuth** can use `https://app.focala.ai/api/mcp`.
 
+## Skills
+
+Customer Agent Skills and client helpers live under [`skills/`](skills/). Each skill calls only the tools listed below.
+
+| Skill | One-liner |
+| --- | --- |
+| [`ai-visibility-briefing`](skills/ai-visibility-briefing/SKILL.md) | Weekly / period AI visibility briefing: mentions, citations, trends, share vs competitors, next actions. |
+| [`competitor-gap-analysis`](skills/competitor-gap-analysis/SKILL.md) | Where competitors are cited or mentioned and your brand is not; prompts to target. |
+| [`opportunity-planner`](skills/opportunity-planner/SKILL.md) | Content and prompt action plan; writes prompts/tasks only after you confirm. |
+| [`ai-traffic-report`](skills/ai-traffic-report/SKILL.md) | AI-assistant referral traffic (Focala + GA4) with a separate Search Console organic section. |
+
+**Install**
+
+- **Claude Code:** `claude plugin marketplace add Focala/mcp` then `claude plugin install focala@focala-mcp`, or `claude --plugin-dir` on a checkout. The plugin bundles the four skills and the remote MCP server.
+- **Cursor:** copy [`skills/cursor/visibility-briefing.mdc`](skills/cursor/visibility-briefing.mdc) to `.cursor/rules/`, and optionally the four `SKILL.md` folders as Cursor skills; connect MCP as above.
+- **ChatGPT:** paste [`skills/chatgpt/visibility-briefing-instructions.md`](skills/chatgpt/visibility-briefing-instructions.md) into app / GPT instructions; use [`skills/starter-prompts.md`](skills/starter-prompts.md) for examples.
+
+See [`skills/README.md`](skills/README.md) for packaging details.
+
 ## Tools (22)
 
 ### Read tools
@@ -125,7 +144,7 @@ Require manage access on the connection plus an editor or admin role:
 | `create_task` | Create and optionally assign a task |
 | `update_task` | Update task details, assignment, or status |
 
-Writes require an **idempotency key**. Updates need the record's latest `updatedAt`.
+Writes require an **`idempotencyKey`**. Updates need the record's latest **`expectedUpdatedAt`**.
 
 ## Limits
 
