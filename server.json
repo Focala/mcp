@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.focala/mcp",
+  "title": "Focala",
+  "description": "AEO, GEO & SEO AI visibility: brand mentions, citations, share of voice, GA4 & GSC.",
+  "version": "1.0.0",
+  "websiteUrl": "https://focala.ai",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://app.focala.ai/api/mcp"
+    }
+  ]
+}
