@@ -4,6 +4,8 @@ Customer-facing skills for the hosted Focala MCP server (`https://app.focala.ai/
 
 Buyer insights (`get_buyer_insights`) cover themes and objections from buyer conversations. There is no pipeline or deal-attribution tool on this server.
 
+The same four workflows are also registered as MCP prompts (`prompts/list` / `prompts/get`) with matching names. Prompt args: `startDate` / `endDate` (YYYY-MM-DD, both or neither; no `period` enum), plus `focus`, and `competitor` on `competitor-gap-analysis` only. When dates are omitted, range tools default to the last 30 complete UTC days; the briefing asks for an explicit 7-day window.
+
 Canonical docs: https://app.focala.ai/docs/mcp.html
 
 ## What's in this folder
@@ -16,7 +18,7 @@ Canonical docs: https://app.focala.ai/docs/mcp.html
 | `ai-traffic-report/SKILL.md` | Traffic from AI assistants via stored Focala totals, live GA4, and a separate Search Console organic section. |
 | `chatgpt/visibility-briefing-instructions.md` | Short ChatGPT app / custom GPT instructions for the briefing skill. |
 | `cursor/visibility-briefing.mdc` | Cursor rule (`.mdc`) for the briefing skill. |
-| `starter-prompts.md` | Suggested starter prompts for directories and docs. |
+| `starter-prompts.md` | Suggested starter prompts for directories and docs (aligned with the four MCP prompt names). |
 
 Each `SKILL.md` uses the Anthropic Agent Skills format: YAML frontmatter with `name` and a `description` that says when to use the skill, then concise steps that call Focala tools by name, an expected output format, and edge cases (no data, not connected, GA4 or Search Console not linked, no write access).
 
@@ -61,6 +63,15 @@ The prompts in `starter-prompts.md` are safe for public MCP docs and directory â
 
 ## Tool notes the skills already work around
 
+- Dates are `startDate` / `endDate` only (both or neither). There is no tool `period` enum. `nextPage` is a response field; pagination inputs are `page` / `limit`.
+- `get_visibility` accepts only dates, `engineIds`, `categories`, and `granularity` â€” not breakdown filters.
+- `get_visibility_breakdown` uses `promptIds` (array), not `promptId`.
+- On `get_competitors`, row `key` is returned and passed back as `detailKey`.
+- `get_sources` compare mode rejects `topicIds` / `tag` (and other mode-gated fields).
+- `list_content` has no `contentId`; pass the GUID to `get_content_performance`.
+- GA4 filters use `{dimension, values, matchType?, caseSensitive?}`; GSC filters use `{dimension, expression, operator?}`.
+- `create_prompt` needs `text` + `idempotencyKey`; `update_prompt` needs `id`, `idempotencyKey`, `expectedUpdatedAt`.
+- `get_task` takes only `taskId`; `list_assignees` takes only `page` / `limit`.
 - There is no first-class share-of-voice metric. The briefing compares visibility and answer presence versus competitors on monitored prompts only, and says so.
 - `create_prompt` does not start an analysis run.
 - `get_competitors` citation opportunities exclude social hosts; skills route those questions to `get_sources`.

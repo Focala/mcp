@@ -89,9 +89,9 @@ Any client that supports **Streamable HTTP** and **OAuth** can use `https://app.
 
 ## Skills
 
-Customer Agent Skills and client helpers live under [`skills/`](skills/). Each skill calls only the tools listed below.
+Customer Agent Skills and client helpers live under [`skills/`](skills/). Each skill calls only the tools listed below. The same four names are also MCP prompts (`prompts/list` / `prompts/get`) with optional `startDate` / `endDate` (YYYY-MM-DD, both or neither; no `period` enum), `focus`, and `competitor` on the gap analysis prompt. Briefings without dates should pass an explicit 7-day window; other range tools default to the last 30 complete UTC days when dates are omitted. GA4 and Search Console tool calls always require both dates.
 
-| Skill | One-liner |
+| Skill / MCP prompt | One-liner |
 | --- | --- |
 | [`ai-visibility-briefing`](skills/ai-visibility-briefing/SKILL.md) | Weekly / period AI visibility briefing: mentions, citations, trends, share vs competitors, next actions. |
 | [`competitor-gap-analysis`](skills/competitor-gap-analysis/SKILL.md) | Where competitors are cited or mentioned and your brand is not; prompts to target. |
