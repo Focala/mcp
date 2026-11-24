@@ -4,17 +4,31 @@
   <img src="assets/focala-icon-400.png" alt="Focala" width="120" height="120" />
 </p>
 
-Official docs and setup for the Focala MCP server: AI visibility, GA4, Search Console, CRM and buyer insights in Claude, Cursor, ChatGPT and more.
+Official docs and setup for the Focala MCP server — AI search visibility for Answer Engine Optimization (AEO), Generative Engine Optimization (GEO) and SEO: brand mentions and citations in ChatGPT, Claude, Perplexity, Gemini and Google AI Overviews, plus GA4, Search Console, CRM and buyer insights in Claude, Cursor, ChatGPT and more.
 
 ## What it is
 
-[Focala](https://focala.ai) is an AI visibility / AEO / GEO platform. Its MCP server is a **hosted remote server** (Streamable HTTP) at:
+[Focala](https://focala.ai) is the AI Visibility / AI Search Optimization platform for AEO (Answer Engine Optimization), GEO (Generative Engine Optimization) and SEO. It helps brands get discovered, cited and recommended across ChatGPT, Perplexity, Claude, Gemini, Google AI Overview and other AI answer engines — tracking LLM visibility, AI citations, share of voice and competitor benchmarking alongside traditional search.
+
+Its MCP server is a **hosted remote server** (Streamable HTTP) at:
 
 ```text
 https://app.focala.ai/api/mcp
 ```
 
-Auth is **OAuth 2.0 authorization code + PKCE (S256)**. There is no API key, nothing to install, and no npx / npm / Docker package. Add the URL in your client, sign in, and pick one Focala workspace per connection. A Focala account is required.
+Connect ChatGPT, Claude, Perplexity, Gemini, Grok, Cursor or any MCP client and get AI search analytics for AEO, GEO and AI SEO in one place — brand visibility, competitor comparisons, cited sources, content opportunities, AI referral traffic, GA4, Search Console, CRM pipeline and buyer insights. Auth is **OAuth 2.0 authorization code + PKCE (S256)**. There is no API key, nothing to install, and no npx / npm / Docker package. Add the URL in your client, sign in, and pick one Focala workspace per connection. A Focala account is required.
+
+## What you can do
+
+Ask in plain language once connected, for example:
+
+- How often does our brand appear in AI answers, and how has our AI Visibility Score changed?
+- Which competitors are cited instead of us in ChatGPT, Claude, Perplexity or Google AI Overview?
+- Which domains and pages are the cited sources driving share of voice?
+- Which pages get the most AI referral traffic in GA4 this month?
+- Which Search Console queries lost clicks while impressions grew?
+- What content should we create next for AEO and AI SEO?
+- What questions and objections do buyers raise most on sales calls?
 
 ## Setup
 
