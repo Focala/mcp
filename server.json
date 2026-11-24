@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "ai.focala/mcp",
   "title": "Focala",
-  "description": "AEO, GEO & SEO AI visibility: brand mentions, citations, share of voice, GA4 & GSC.",
-  "version": "1.0.0",
+  "description": "AEO, GEO & SEO AI visibility: brand mentions, citations, GA4, GSC & buyer insights.",
+  "version": "1.0.1",
   "websiteUrl": "https://app.focala.ai/docs/mcp.html",
   "remotes": [
     {
